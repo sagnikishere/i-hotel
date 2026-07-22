@@ -1,0 +1,121 @@
+.room-overview {
+  margin-bottom: 1.5rem;
+}
+
+.legend {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot-available { background-color: var(--green-main); }
+.dot-confirmed { background-color: var(--green-light); }
+.dot-checkedin { background-color: var(--green-dark); }
+.dot-blocked { background-color: #000000; }
+
+.room-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.room-column {
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius-md);
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  min-height: 300px;
+}
+
+.column-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--green-dark);
+}
+
+.col-available .column-title { color: var(--green-dark); }
+.col-confirmed .column-title { color: var(--green-dark); }
+.col-checkedin .column-title { color: var(--green-dark); }
+.col-blocked .column-title { color: #000000; }
+
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.category-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.category-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.room-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.room-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 28px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--border-radius-sm);
+  color: var(--text-main);
+}
+
+/* Background colors based on the design */
+.badge-available {
+  background-color: #E6F4EA; /* Very light green */
+}
+
+.badge-confirmed {
+  background-color: #E6F4EA; 
+}
+
+.badge-checkedin {
+  background-color: #E6F4EA;
+}
+
+.badge-blocked {
+  background-color: var(--green-main);
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .room-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .room-columns {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,38 @@
+.expected-arrivals-mini {
+  /* Fits in the grid */
+}
+
+.mini-arrivals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mini-arrival-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mini-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.mini-arrival-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.mini-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.mini-room-time {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}

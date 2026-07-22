@@ -1,0 +1,35 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 1.5rem;
+  padding: 0 8rem; /* Increased padding 4x to show ribbons */
+  max-width: 1800px; /* Increased max-width to compensate for padding */
+  margin: 0 auto;
+  width: 100%;
+}
+
+.main-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Media Queries for responsiveness (optional but good for a basic structure) */
+@media (max-width: 1200px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+}

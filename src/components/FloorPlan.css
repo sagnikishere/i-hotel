@@ -1,0 +1,71 @@
+.floor-plan {
+  display: flex;
+  flex-direction: column;
+}
+
+.view-link {
+  font-size: 0.75rem;
+  color: var(--green-dark);
+  font-weight: 600;
+}
+
+.floors-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex-grow: 1;
+}
+
+.floor-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+}
+
+.floor-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+.floor-room {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Base background colors from the design */
+/* Wait, the legend says: Occupied (green), Dirty (gray), Cleaning (light green), Maintenance (red), Vacant (light gray) */
+/* Actually looking at the legend in the design:
+Occupied: dark green dot
+Dirty: grey dot
+Cleaning: light green dot
+Maintenance: red dot
+Vacant: very light gray dot
+*/
+.bg-occupied { background-color: #E6F4EA; color: var(--text-main); } 
+.bg-dirty { background-color: #E2E8F0; }
+.bg-cleaning { background-color: #F0FFF4; }
+.bg-maintenance { background-color: #FED7D7; color: #C53030; }
+.bg-vacant { background-color: #F7FAFC; border: 1px dashed var(--border-color); }
+
+.floor-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.bg-occupied-dot { background-color: var(--green-dark); }
+.bg-dirty-dot { background-color: #A0AEC0; }
+.bg-cleaning-dot { background-color: var(--green-light); }
+.bg-maintenance-dot { background-color: #E53E3E; }
+.bg-vacant-dot { background-color: #E2E8F0; }

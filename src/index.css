@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #E63946; /* The pinkish red for iHotel logo */
+  --bg-color: #f7fafc; /* Light greyish blue background */
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --text-main: #1a202c;
+  --text-muted: #718096;
+  --text-light: #a0aec0;
+  
+  --green-dark: #2F855A;
+  --green-main: #48BB78;
+  --green-light: #C6F6D5;
+  --green-lighter: #F0FFF4;
+  
+  --border-color: #e2e8f0;
+  --border-radius-lg: 16px;
+  --border-radius-md: 12px;
+  --border-radius-sm: 8px;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 10px 25px rgba(0, 0, 0, 0.02);
+
+  /* Status Colors */
+  --status-available: #48BB78;
+  --status-occupied: #A0AEC0;
+  --status-checkedin: #2F855A;
+  --status-blocked: #1A202C;
+  --status-dirty: #E2E8F0;
+  --status-cleaning: #A0AEC0;
+  --status-maintenance: #E53E3E;
+  --status-vacant: #EDF2F7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 13px; /* Scales down the entire UI to ~80% native size */
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  background-color: #fcfcfc; /* Lighter cleaner base */
+  color: var(--text-main);
+  
+  /* Pink Swirl Design using provided images */
+  background-image: url('/left-ribbon.png'), url('/right-ribbon.png');
+  background-position: left center, right top;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  background-size: auto 100%, auto 120%; /* Right ribbon slightly larger to hug the edge */
+  min-height: 100vh;
+}
+
+/* Typography utilities */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-base { font-size: 1rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+.text-muted { color: var(--text-muted); }
+.text-main { color: var(--text-main); }
+.text-primary { color: var(--primary-color); }
+.text-green { color: var(--green-dark); }
+
+/* Layout utilities */
+.flex { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.gap-1 { gap: 0.25rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.gap-8 { gap: 2rem; }
+
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+
+/* Card Component */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-green {
+  background-color: var(--green-lighter);
+  color: var(--green-dark);
+}
+
+/* Utilities */
+.cursor-pointer {
+  cursor: pointer;
+}
