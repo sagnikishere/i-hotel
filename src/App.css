@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
   padding-bottom: 2rem;
 }
 
@@ -9,8 +12,8 @@
   display: grid;
   grid-template-columns: 1fr 300px;
   gap: 1.5rem;
-  padding: 0 8rem; /* Increased padding 4x to show ribbons */
-  max-width: 1800px; /* Increased max-width to compensate for padding */
+  padding: 0 4rem;
+  max-width: 1800px;
   margin: 0 auto;
   width: 100%;
 }
