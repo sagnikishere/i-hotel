@@ -37,7 +37,7 @@ function App() {
           <StatCards />
           <RoomOverview />
           
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
+          <div className="dashboard-three-grid">
             <ExpectedArrivalsList />
             <FloorPlan />
             <RoomStatus />
