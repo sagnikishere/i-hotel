@@ -3,13 +3,42 @@ import { ComposedChart, Line, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContai
 import { ArrowUp } from 'lucide-react';
 import './MonthlyOverview.css';
 
+// Fixed chart data so it does not auto-regenerate and animate on every render
+const data = [
+  { name: '01', revenue: 42000, occupancy: 55 },
+  { name: '02', revenue: 48000, occupancy: 60 },
+  { name: '03', revenue: 35000, occupancy: 45 },
+  { name: '04', revenue: 52000, occupancy: 68 },
+  { name: '05', revenue: 58000, occupancy: 72 },
+  { name: '06', revenue: 61000, occupancy: 75 },
+  { name: '07', revenue: 45000, occupancy: 58 },
+  { name: '08', revenue: 39000, occupancy: 50 },
+  { name: '09', revenue: 50000, occupancy: 65 },
+  { name: '10', revenue: 56000, occupancy: 70 },
+  { name: '11', revenue: 63000, occupancy: 78 },
+  { name: '12', revenue: 47000, occupancy: 60 },
+  { name: '13', revenue: 53000, occupancy: 67 },
+  { name: '14', revenue: 59000, occupancy: 74 },
+  { name: '15', revenue: 65000, occupancy: 80 },
+  { name: '16', revenue: 48000, occupancy: 62 },
+  { name: '17', revenue: 42000, occupancy: 55 },
+  { name: '18', revenue: 51000, occupancy: 66 },
+  { name: '19', revenue: 57000, occupancy: 71 },
+  { name: '20', revenue: 64000, occupancy: 79 },
+  { name: '21', revenue: 60000, occupancy: 76 },
+  { name: '22', revenue: 46000, occupancy: 59 },
+  { name: '23', revenue: 52000, occupancy: 68 },
+  { name: '24', revenue: 58000, occupancy: 73 },
+  { name: '25', revenue: 66000, occupancy: 82 },
+  { name: '26', revenue: 62000, occupancy: 77 },
+  { name: '27', revenue: 49000, occupancy: 63 },
+  { name: '28', revenue: 54000, occupancy: 69 },
+  { name: '29', revenue: 61000, occupancy: 75 },
+  { name: '30', revenue: 67000, occupancy: 84 },
+  { name: '31', revenue: 70000, occupancy: 88 },
+];
+
 const MonthlyOverview = () => {
-  // Generate mock data for the 31 days
-  const data = Array.from({ length: 31 }, (_, i) => ({
-    name: (i + 1).toString().padStart(2, '0'),
-    revenue: Math.floor(Math.random() * 60000) + 20000,
-    occupancy: Math.floor(Math.random() * 50) + 30,
-  }));
 
   const stats = [
     { label: 'Occupancy Rate', value: '72%', increase: '8%' },

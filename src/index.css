@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #E63946; /* The pinkish red for iHotel logo */
-  --bg-color: #f7fafc; /* Light greyish blue background */
+  --bg-color: #e2f7eb; /* Soft full light green background */
   --card-bg: rgba(255, 255, 255, 0.95);
   --text-main: #1a202c;
   --text-muted: #718096;
@@ -56,12 +56,15 @@
 
 html {
   font-size: 13px; /* Scales down the entire UI to ~80% native size */
+  background-color: #e2f7eb;
+  min-height: 100vh;
+  width: 100%;
 }
 
 body {
   font-size: 1rem;
   font-family: 'Inter', sans-serif;
-  background-color: #fcfcfc; /* Lighter cleaner base */
+  background-color: #e2f7eb; /* Full light green background */
   
   /* Pink Swirl Design using provided images and generated dot grid */
   background-image: 
@@ -73,6 +76,7 @@ body {
   background-attachment: fixed, fixed, fixed;
   background-size: 700px 700px, auto 95%, auto 120%;
   min-height: 100vh;
+  width: 100%;
 }
 
 /* Typography utilities */

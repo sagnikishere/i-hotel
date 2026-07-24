@@ -25,9 +25,8 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // Enable or disable global content editing
-    document.designMode = isEditable ? 'on' : 'off';
-  }, [isEditable]);
+    document.designMode = 'off';
+  }, []);
 
   return (
     <div className="dashboard-container">
