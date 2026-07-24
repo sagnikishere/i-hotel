@@ -19,7 +19,7 @@ const RoomOverview = () => {
         'Suite Room': ['601', '602']
       }
     },
-    'Checked In': {
+    'Today Expected': {
       count: 14,
       categories: {
         'Executive Room': ['212', '213', '214', '215'],
@@ -42,9 +42,9 @@ const RoomOverview = () => {
       <div className="card-header">
         <h2 className="card-title text-lg">Room Overview</h2>
         <div className="legend">
-          <div className="legend-item"><span className="dot dot-available"></span> Available</div>
+          <div className="legend-item"><span className="dot dot-available"></span> Available (Blank)</div>
           <div className="legend-item"><span className="dot dot-confirmed"></span> Confirmed</div>
-          <div className="legend-item"><span className="dot dot-checkedin"></span> Checked In</div>
+          <div className="legend-item"><span className="dot dot-expected"></span> Today Expected</div>
           <div className="legend-item"><span className="dot dot-blocked"></span> Blocked</div>
         </div>
       </div>

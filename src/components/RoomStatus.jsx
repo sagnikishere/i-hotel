@@ -4,11 +4,10 @@ import './RoomStatus.css';
 
 const RoomStatus = () => {
   const data = [
-    { name: 'Available', value: 24, percent: '32%', color: '#48BB78' },
-    { name: 'Occupied', value: 31, percent: '41%', color: '#A0AEC0' },
-    { name: 'Checked In', value: 14, percent: '19%', color: '#2F855A' },
-    { name: 'Blocked', value: 3, percent: '4%', color: '#1A202C' },
-    { name: 'Maintenance', value: 3, percent: '4%', color: '#E2E8F0' },
+    { name: 'Blank / Vacant', value: 24, percent: '32%', color: '#22C55E' },
+    { name: 'Today Expected', value: 25, percent: '33%', color: '#0EA5E9' },
+    { name: 'Confirmed', value: 17, percent: '23%', color: '#EAB308' },
+    { name: 'Blocked', value: 9, percent: '12%', color: '#EF4444' },
   ];
 
   return (

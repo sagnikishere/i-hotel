@@ -13,18 +13,18 @@ const dummyData = [
   { value: 800 },
 ];
 
-const StatCard = ({ title, value, increase, icon: Icon }) => (
-  <div className="stat-card card">
+const StatCard = ({ title, value, increase, icon: Icon, color, strokeColor }) => (
+  <div className={`stat-card card stat-card-${color}`}>
     <div className="stat-card-left">
-      <div className="icon-wrapper">
-        <Icon size={24} className="text-green" />
+      <div className={`icon-wrapper icon-wrapper-${color}`}>
+        <Icon size={22} />
       </div>
     </div>
     
     <div className="stat-card-center">
       <h3 className="stat-title">{title}</h3>
       <div className="stat-value">{value}</div>
-      <div className="stat-increase">
+      <div className={`stat-increase stat-increase-${color}`}>
         <ArrowUp size={12} /> {increase} from yesterday
       </div>
     </div>
@@ -35,7 +35,7 @@ const StatCard = ({ title, value, increase, icon: Icon }) => (
           <Line 
             type="monotone" 
             dataKey="value" 
-            stroke="#48BB78" 
+            stroke={strokeColor} 
             strokeWidth={2} 
             dot={false} 
             isAnimationActive={false} 
@@ -48,10 +48,10 @@ const StatCard = ({ title, value, increase, icon: Icon }) => (
 
 const StatCards = () => {
   const cards = [
-    { title: 'Available Rooms', value: '24', increase: '12%', icon: BedDouble },
-    { title: 'Occupied Rooms', value: '81', increase: '8%', icon: User },
-    { title: "Today's ARR", value: '₹ 5,200', increase: '15%', icon: IndianRupee },
-    { title: 'Total Revenue', value: '₹ 1,25,000', increase: '10%', icon: BarChart3 },
+    { title: 'Blank / Vacant Rooms', value: '24', increase: '12%', icon: BedDouble, color: 'green', strokeColor: '#22C55E' },
+    { title: 'Today Expected', value: '25', increase: '8%', icon: User, color: 'blue', strokeColor: '#0EA5E9' },
+    { title: 'Confirmed Rooms', value: '17', increase: '15%', icon: IndianRupee, color: 'yellow', strokeColor: '#EAB308' },
+    { title: 'Blocked Rooms', value: '3', increase: '2%', icon: BarChart3, color: 'red', strokeColor: '#EF4444' },
   ];
 
   return (
